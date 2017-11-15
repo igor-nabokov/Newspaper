@@ -3,8 +3,124 @@
 	<head>
 		<meta charset="UTF-8">
 		<link href="style.css" rel="stylesheet">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<script type="text/javascript" src="script.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+				crossorigin="anonymous">
+		</script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
+		<div id="root" class="container">
+			<div class="row">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container-fluid">
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li id="logo"></li>
+								<li class="active"><a href="#">Все новости</a></li>
+								<li><a href="#">Украина</a></li>
+								<li><a href="#">Мир</a></li>
+								<li><a href="#">Финансы</a></li>
+								<li><a href="#">Политика</a></li>
+								<li><a href="#">Спорт</a></li>
+								<li><a href="#">Здоровье</a></li>
+								<li><a href="#">Паранормальное</a></li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Действие</a></li>
+										<li><a href="#">Другое действие</a></li>
+										<li><a href="#">Что-то еще</a></li>
+										<li class="divider"></li>
+										<li><a href="#">Отдельная ссылка</a></li>
+										<li class="divider"></li>
+										<li><a href="#">Еще одна отдельная ссылка</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<div class="row">
+				<div class="col-md-5">
+					<div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+						<!-- Индикаторы для карусели -->
+						<ol class="carousel-indicators">
+							<!-- Перейти к 0 слайду карусели с помощью соответствующего индекса data-slide-to="0" -->
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<!-- Перейти к 1 слайду карусели с помощью соответствующего индекса data-slide-to="1" -->
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<!-- Перейти к 2 слайду карусели с помощью соответствующего индекса data-slide-to="2" -->
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>   
+						<!-- Слайды карусели -->
+				  <div class="carousel-inner">
+					<!-- Слайды создаются с помощью контейнера с классом item, внутри которого помещается содержимое слайда -->
+					<div class="active item">
+					  <h2>Слайд №1</h2>
+					  <div class="carousel-caption">
+						<h3>Заголовок 1 слайда</h3>
+						<p>Текст (описание) 1 слайда...</p>
+					  </div>
+					</div>
+					<!-- Слайд №2 -->
+					<div class="item">
+					  <h2>Slide 2</h2>
+					  <div class="carousel-caption">
+						<h3>Second slide label</h3>
+						<p>Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
+					  </div>
+					</div>
+					<!-- Слайд №3 -->
+					<div class="item">
+					  <h2>Slide 3</h2>
+					  <div class="carousel-caption">
+						<h3>Third slide label</h3>
+						<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+					  </div>
+					</div>
+				  </div>
+				  <!-- Навигация для карусели -->
+				  <!-- Кнопка, осуществляющая переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
+				  <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				  </a>
+				  <!-- Кнопка, осуществляющая переход на следующий слайд с помощью атрибута data-slide="next" -->
+				  <a class="carousel-control right" href="#myCarousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				  </a>
+				</div>
+				</div>
+				<div class="col-md-4"></div>
+				<div class="col-md-3"></div>
+			</div>
+			<div class="row">
+				<div class="container-fluid">
+					<div class="row">
+						<!--Тут у меня будет поиск-->
+					</div>
+					<div class="row">
+						<!--Тут у меня будет видео-->
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="container-fluid">
+					<div class="row">
+						<!--Тут у меня будет Sign In/Up-->
+					</div>
+					<div class="row">
+						<!--Тут у меня будет погода-->
+					</div>
+					<div class="row">
+						<!--Тут у меня будет курс валют-->
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
