@@ -11,3 +11,9 @@
 #leftbutton, #rightbutton {
 	cursor: pointer;
 }
+
+#logo {
+	background-image: url("images/logo.png");
+	width: 100px;
+	height: 50px;
+}
