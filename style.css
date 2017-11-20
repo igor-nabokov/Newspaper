@@ -21,3 +21,84 @@
 .more-menu {
 	padding-top: 12px;
 }
+
+.circle {
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	border: 4px double black;
+	display: inline-block;
+}
+
+#selected {
+	background-color: black;
+}
+
+#left-button, #right-button{
+	cursor: pointer;
+}
+
+#left-button:hover {
+	background-color: gray;
+}
+
+#right-button:hover {
+	background-color: gray;
+}
+
+#great-div {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: black;
+	display: none;
+}
+
+#new-div {
+	background-color: #C0C0C0;
+	height: 200px;
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+.sign-up {
+	margin-top:30px;
+	margin-left:10px;
+}
+
+#closet {
+	position: relative;
+	left: 321px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#great-div-2 {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: black;
+	display: none;
+}
+
+#new-div-2 {
+	background-color: #C0C0C0;
+	height: 200px;
+	width: 400px;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+#close {
+	position: relative;
+	left: 321px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}

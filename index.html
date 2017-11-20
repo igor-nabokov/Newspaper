@@ -59,20 +59,25 @@
 					<img src="images/right.jpg" id="rightbutton">
 				</div>
 				</div>
-				<div class="col-md-4"></div>
-				<div class="col-md-3"></div>
 			</div>
-			<div class="row">
+			<div>
+				<div class="circle" id="left-button"></div>
+				<div class="circle" id="selected"></div>
+				<div class="circle" id="right-button"></div>
+			</div>
+			<div class="row col-md-4">
 				<div class="container-fluid">
 					<div class="row">
 						<!--Тут у меня будет видео-->
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row col-md-3">
 				<div class="container-fluid">
 					<div class="row">
 						<!--Тут у меня будет Sign In/Up-->
+						<button onclick="signIn()">Войти</button><br>
+						<button onclick="signUp()">Зарегистрироваться</button>
 					</div>
 					<div class="row">
 						<!--Тут у меня будет погода-->
@@ -80,6 +85,39 @@
 					<div class="row">
 						<!--Тут у меня будет курс валют-->
 					</div>
+				</div>
+			</div>
+		</div>
+		<div id="great-div" style="display:none;">
+			<div id="new-div">
+				<div class="sign-up">
+				<form>
+				<input type="button" value="Закрыть" id="closet" onclick="close1()">
+				<p><b>Зарегистрироваться</b></p>
+				<label for="login-field">Ваш логин</label>
+				<input type="text" name="login" id="login-field">
+				<br>
+				<label for="password-field">Ваш пароль</label>
+				<input type="text" name="password" id="password-field" value="*******">
+				<input type="button" value="Зарегистрироваться">
+				</form>
+				</div>
+			</div>
+		</div>
+		
+		<div id="great-div-2" style="display:none;">
+			<div id="new-div-2">
+				<div class="sign-up">
+				<form>
+				<input type="button" value="Закрыть" id="close" onclick="close2()">
+				<p><b>Войти на сайт</b></p>
+				<label for="login-f">Ваш логин</label>
+				<input type="text" name="login" id="login-f">
+				<br>
+				<label for="password-f">Ваш пароль</label>
+				<input type="text" name="password" id="password-f" value="*******">
+				<input type="button" value="Войти на сайт">
+				</form>
 				</div>
 			</div>
 		</div>
