@@ -73,3 +73,33 @@ function close2 () {
 	var closeG = document.getElementById("great-div-2");
 	closeG.style.display = "none";
 }
+
+
+function closeDiv (elem) {
+	elem.style.display = "none";
+}
+
+function closeDiv2 (elem) {
+	elem.style.display = "none";
+}
+
+$.get(
+  	"https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=6f7c85381a5c44deb7e024cd02c60e31",
+  	function (e) {
+  	
+  		var news = document.getElementById("newsAll");
+
+  		
+
+	for (var i = 0; i < e.articles.length; i++) {
+		console.log(e.articles[i]);
+
+
+		var newDivNews = document.createElement('div');
+  		newDivNews.innerHTML = e.articles[i].title + '<br>' + e.articles[i].description +
+'<br> <img src="'+ e.articles[i].urlToImage +'" width="256" height="144">' + 
+'<br>' + e.articles[i].url + '<hr>';
+		news.appendChild(newDivNews);
+   }
+
+ });

@@ -57,7 +57,7 @@
 	top: 0;
 	right: 0;
 	bottom: 0;
-	background-color: black;
+	background: rgba( 0, 0, 0, 0.8);
 	display: none;
 }
 
@@ -67,6 +67,7 @@
 	width: 400px;
 	margin: 0 auto;
 	margin-top: 200px;
+
 }
 
 .sign-up {
@@ -88,8 +89,9 @@
 	top: 0;
 	right: 0;
 	bottom: 0;
-	background-color: black;
+	background: rgba( 0, 0, 0, 0.8);
 	display: none;
+
 }
 
 #new-div-2 {
@@ -98,6 +100,7 @@
 	width: 400px;
 	margin: 0 auto;
 	margin-top: 200px;
+
 }
 
 #close {
