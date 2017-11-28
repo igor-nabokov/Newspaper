@@ -4,18 +4,13 @@
 		<meta charset="UTF-8">
 		<link href="style.css" rel="stylesheet">
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-				crossorigin="anonymous">
-		</script>
-		<!---<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
-		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script
   			src="https://code.jquery.com/jquery-3.2.1.js"
   			integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   			crossorigin="anonymous">
   		</script>
+  		<script type="text/javascript" src="script.js"></script>
 	</head>
 	<body>
 		<div id="root" class="container">
@@ -33,7 +28,7 @@
 								<li><a href="#">Кинематограф</a></li>
 								<li><a href="#">Музыка</a></li>
 								<li><a href="#">Спорт</a></li>
-								<li class="more-menu"><button onclick="burgerMenu()">Еще рубрики</button></li>
+								<li class="more-menu"><button id="burgerMenuBtn">Еще рубрики</button></li>
 							</ul>
 							<ul class="nav navbar-nav" style="display:none;" id="dropdown">
 								<li><a href="#">Здоровье</a></li>
@@ -74,32 +69,32 @@
 						<!--Тут у меня будет гармошка-->
 						<ul>
 							<li class="harmonic">Спорт
-							<ul style="display: none">
-								<li>Футбол</li>
-								<li>Хоккей</li>
-								<li>Баскетбол</li>
-								<li>Тенис</li>
-							</ul>
+								<ul style="display: none">
+									<li>Футбол</li>
+									<li>Хоккей</li>
+									<li>Баскетбол</li>
+									<li>Тенис</li>
+								</ul>
 							</li>
 							<li class="harmonic">Бизнес
-							<ul style="display: none">
-								<li>Экономика</li>
-								<li>Финансы</li>
-								<li>Новости компаний</li>
-								<li>Интернет и IT</li>
-								<li>Автомобили</li>
-								<li>Налоги</li>
-							</ul>
+								<ul style="display: none">
+									<li>Экономика</li>
+									<li>Финансы</li>
+									<li>Новости компаний</li>
+									<li>Интернет и IT</li>
+									<li>Автомобили</li>
+									<li>Налоги</li>
+								</ul>
 							</li>
 							<li class="harmonic">Стиль жизни
-							<ul style="display: none">
-								<li>Афиша</li>
-								<li>Интерьеры</li>
-								<li>Путешествия</li>
-								<li>Киберспорт</li>
-								<li>Гаджеты</li>
-								<li>Еда и напитки</li>
-							</ul>
+								<ul style="display: none">
+									<li>Афиша</li>
+									<li>Интерьеры</li>
+									<li>Путешествия</li>
+									<li>Киберспорт</li>
+									<li>Гаджеты</li>
+									<li>Еда и напитки</li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -158,6 +153,5 @@
 				</div>
 			</div>
 		</div>
-	<script type="text/javascript" src="script.js"></script>
 	</body>
 </html>
