@@ -83,6 +83,25 @@ window.addEventListener("DOMContentLoaded", function () {
 	};
 
 	//сюда дальше писать весь код, который выполняется при загрузке документа
+
+	//Это код для куки
+	var date = new Date(new Date().getTime() + 10 * 1000);
+	document.cookie = "banner=yes; path=/; expires=" + date.toUTCString();
+	function getcookie(a) {var b = new RegExp(a+'=([^;]){1,}');var c = b.exec(document.cookie);if(c) c = c[0].split('=');else return false;return c[1] ? c[1] : false;}
+	function ready() {
+	var advertising = document.querySelector('div#banner-advertising');
+	function getCookieInterval() {
+	 var banner = getcookie( "banner" );
+	 if ( banner != "yes"){
+	     advertising.style.display = 'none';
+	   }else{
+	     advertising.style.display = 'block';
+	   }
+	}
+	setInterval(function() {
+	 getCookieInterval();
+	},100)
+	}
 });
 
 
