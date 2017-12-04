@@ -52,9 +52,9 @@ window.addEventListener("DOMContentLoaded", function () {
 	  		var news = document.getElementById("newsAll");
 		for (var i = 0; i < e.articles.length; i++) {
 			var newDivNews = document.createElement('div');
-	  		newDivNews.innerHTML = e.articles[i].title + '<br>' + e.articles[i].description +
+	  		newDivNews.innerHTML = '<a href="'+e.articles[i].url+'">' + e.articles[i].title + '</a>' + '<br>' + e.articles[i].description +
 	'<br> <img src="'+ e.articles[i].urlToImage +'" width="256" height="144">' + 
-	'<br>' + e.articles[i].url + '<hr>';
+	'<br>' + '<hr>';
 			news.appendChild(newDivNews);
 	   }
 	 });
