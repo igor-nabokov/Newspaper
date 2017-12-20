@@ -14,7 +14,6 @@ window.addEventListener("DOMContentLoaded", function () {
 		  			menuItemA.innerHTML = menuItem.name;
 		  			menuItemLi.appendChild(menuItemA);
 		  			navbar.insertBefore(menuItemLi, document.querySelector('.more-menu'));
-		  			console.log(menuItem);
 		  		}
 
 		  		var dropdown = document.getElementById("dropdown");
@@ -26,7 +25,6 @@ window.addEventListener("DOMContentLoaded", function () {
 		  			menuItemA.innerHTML = menuItem.name;
 		  			menuItemLi.appendChild(menuItemA);
 		  			dropdown.appendChild(menuItemLi);
-		  			console.log(menuItem);
 		  		}
 		  	}
 	);
@@ -142,7 +140,6 @@ window.addEventListener("DOMContentLoaded", function () {
 	setInterval(function() {
 	 getCookieInterval();
 	},100)
-
 });
 
 
