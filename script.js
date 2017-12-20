@@ -1,4 +1,36 @@
 window.addEventListener("DOMContentLoaded", function () {
+	$.get(
+		  	"http://stud8.js.uitclassroom.com/json-menu.json",
+		  	function (resultat) {
+		  		var navbar = document.getElementById("navbar-1");
+		  		for (var ind = 0; ind < resultat.navbar.length; ind++) {
+		  			var menuItem = resultat.navbar[ind];
+		  			var menuItemLi = document.createElement('li');
+		  			if (ind == 0) {
+		  				menuItemLi.classList.add("active");
+		  			}
+		  			var menuItemA = document.createElement('a');
+		  			menuItemA.setAttribute("href", menuItem.link);
+		  			menuItemA.innerHTML = menuItem.name;
+		  			menuItemLi.appendChild(menuItemA);
+		  			navbar.insertBefore(menuItemLi, document.querySelector('.more-menu'));
+		  			console.log(menuItem);
+		  		}
+
+		  		var dropdown = document.getElementById("dropdown");
+		  		for (var ind = 0; ind < resultat.dropdown.length; ind++) {
+		  			var menuItem = resultat.dropdown[ind];
+		  			var menuItemLi = document.createElement('li');
+		  			var menuItemA = document.createElement('a');
+		  			menuItemA.setAttribute("href", menuItem.link);
+		  			menuItemA.innerHTML = menuItem.name;
+		  			menuItemLi.appendChild(menuItemA);
+		  			dropdown.appendChild(menuItemLi);
+		  			console.log(menuItem);
+		  		}
+		  	}
+	);
+
 	function burgerMenu () {
 		var dropdown = document.getElementById("dropdown");
 		if (dropdown.style.display === "none") {
@@ -52,9 +84,9 @@ window.addEventListener("DOMContentLoaded", function () {
 	  		var news = document.getElementById("newsAll");
 		for (var i = 0; i < e.articles.length; i++) {
 			var newDivNews = document.createElement('div');
-	  		newDivNews.innerHTML = e.articles[i].title + '<br>' + e.articles[i].description +
+	  		newDivNews.innerHTML = '<a href="'+e.articles[i].url+'">' + e.articles[i].title + '</a>' + '<br>' + e.articles[i].description +
 	'<br> <img src="'+ e.articles[i].urlToImage +'" width="256" height="144">' + 
-	'<br>' + e.articles[i].url + '<hr>';
+	'<br>' + '<hr>';
 			news.appendChild(newDivNews);
 	   }
 	 });
@@ -87,11 +119,20 @@ window.addEventListener("DOMContentLoaded", function () {
 	//Это код для куки
 	var date = new Date(new Date().getTime() + 10 * 1000);
 	document.cookie = "banner=yes; path=/; expires=" + date.toUTCString();
-	function getcookie(a) {var b = new RegExp(a+'=([^;]){1,}');var c = b.exec(document.cookie);if(c) c = c[0].split('=');else return false;return c[1] ? c[1] : false;}
-	function ready() {
+
+	function getcookie(a) {
+		var b = new RegExp(a+'=([^;]){1,}');
+		var c = b.exec(document.cookie);
+		if (c) 
+			c = c[0].split('='); 
+		else 
+			return false; 
+		return c[1] ? c[1] : false;
+	}
+
 	var advertising = document.querySelector('div#banner-advertising');
 	function getCookieInterval() {
-	 var banner = getcookie( "banner" );
+	 var banner = getcookie("banner");
 	 if ( banner != "yes"){
 	     advertising.style.display = 'none';
 	   }else{
@@ -101,7 +142,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	setInterval(function() {
 	 getCookieInterval();
 	},100)
-	}
+
 });
 
 
