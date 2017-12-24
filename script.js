@@ -76,18 +76,29 @@ window.addEventListener("DOMContentLoaded", function () {
 		slid.src = imgArr[index];
 	}
 
+	var url = new URL (window.location.href);
+	var category = url.searchParams.get("category");
+	var categoryUrl
+	if (!category) {
+			categoryUrl = "https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=6f7c85381a5c44deb7e024cd02c60e31";
+	} else {
+		categoryUrl = "/news/" + category + ".json";
+	}
+	var news = document.getElementById("newsAll");
 	$.get(
-	  	"https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=6f7c85381a5c44deb7e024cd02c60e31",
-	  	function (e) {
-	  		var news = document.getElementById("newsAll");
+		  categoryUrl,
+		  function (e) {
 		for (var i = 0; i < e.articles.length; i++) {
 			var newDivNews = document.createElement('div');
-	  		newDivNews.innerHTML = '<a href="'+e.articles[i].url+'">' + e.articles[i].title + '</a>' + '<br>' + e.articles[i].description +
+		  	newDivNews.innerHTML = '<a href="'+e.articles[i].url+'">' + e.articles[i].title + '</a>' + '<br>' + e.articles[i].description +
 	'<br> <img src="'+ e.articles[i].urlToImage +'" width="256" height="144">' + 
 	'<br>' + '<hr>';
 			news.appendChild(newDivNews);
-	   }
+		  }
+	 }).fail(function (){
+	 		news.innerHTML = "<h1>404 page not found</h1>"
 	 });
+		
 
 	var harm = document.getElementsByClassName("harmonic");
 		//console.log(harm);
